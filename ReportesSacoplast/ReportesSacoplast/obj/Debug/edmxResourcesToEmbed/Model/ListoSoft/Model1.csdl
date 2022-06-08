@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SACO_0990868107001Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Caracteristicas" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="LineaId" Type="Int32" Nullable="false" />
+    <Property Name="GrabaIVA" Type="Boolean" Nullable="false" />
+    <Property Name="Kilos" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="Embal1" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Reemplazos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StockActual" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="StockMinimo" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="StockNoVenta" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="StockEnTransito" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="StockReservado" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="StockEnTransitoPrevendido" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CostoTotal" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CostoPromedio" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="UltimoCosto" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CostoFOB" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TipoItemID" Type="Int32" Nullable="false" />
+    <Property Name="UnidadId" Type="Int32" />
+    <Property Name="Embal2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MarcaId" Type="Int32" />
+    <Property Name="ControlaSeries" Type="Boolean" />
+    <Property Name="TallaID" Type="Int32" />
+    <Property Name="ColorID" Type="Int32" />
+    <Property Name="Precio1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio3" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio4" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio5" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PorcUtilidad1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcUtilidad2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcUtilidad3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcUtilidad4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcUtilidad5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinima1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinima2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinima3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinima4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinima5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DolarImportacion" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ProveedoID" Type="Int32" />
+    <Property Name="Ubicacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Caduca" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Temporada" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ArancelPorc" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Genero" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CantMinimaDesc1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinimaDesc2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinimaDesc3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinimaDesc4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CantMinimaDesc5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentDesc1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentDesc2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentDesc3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentDesc4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentDesc5" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValorOriginal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ValorResidual" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="VidaUtil" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeprecAcumulada" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DeprecAnual" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FechaAdqusicion" Type="DateTime" Precision="3" />
+    <Property Name="FechaBase" Type="DateTime" Precision="3" />
+    <Property Name="UnidadMedida_UnidadMedidaID" Type="Int32" />
+    <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Catalogo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BodegaID" Type="Int32" />
+    <Property Name="FechaBaja" Type="DateTime" Precision="3" />
+    <Property Name="ArancelValor" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SucursalID" Type="Int32" />
+    <Property Name="PrimeraCompra" Type="DateTime" Precision="3" />
+    <Property Name="UltimaCompra" Type="DateTime" Precision="3" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="RutaImagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TipoControlInventario" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CantidadUnitariaComponentes" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SubLineaID" Type="Int32" />
+    <Property Name="BodegaIDUbicacion" Type="Int32" />
+    <Property Name="ValorActual" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnidadMedidaIDAlterna" Type="Int32" />
+    <Property Name="FactorDeConversion" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="EsGasto" Type="Boolean" />
+    <Property Name="DepreciacionInicialAcumulada" Type="Decimal" Precision="16" Scale="6" />
+    <Property Name="FechaInicialDepreciacion" Type="DateTime" Precision="3" />
+    <Property Name="PartidaArancelariaID" Type="Int32" />
+    <Property Name="StockPorProducir" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="StockParaProducir" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="StockMaximo" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CasilleroICEID" Type="Int32" />
+    <Property Name="FactorProrrateoTransformaciones" Type="Decimal" Precision="14" Scale="6" />
+    <Property Name="EstaDadoBaja" Type="Boolean" />
+    <Property Name="CostoReposicion" Type="Decimal" Precision="18" Scale="6" />
+    <NavigationProperty Name="Lineas" Relationship="Self.FK_dbo_Items_dbo_Lineas_LineaId" FromRole="Items" ToRole="Lineas" />
+    <NavigationProperty Name="Lineas1" Relationship="Self.FK_Items_SubLineas" FromRole="Items" ToRole="Lineas" />
+  </EntityType>
+  <EntityType Name="Lineas">
+    <Key>
+      <PropertyRef Name="LineaID" />
+    </Key>
+    <Property Name="LineaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CuentaIDVenta" Type="Int32" />
+    <Property Name="CuentaIDVentaNoSRI" Type="Int32" />
+    <Property Name="CuentaIDCosto" Type="Int32" />
+    <Property Name="CuentaIDDescuento" Type="Int32" />
+    <Property Name="CuentaIDInventario" Type="Int32" />
+    <Property Name="CuentaIDGastos" Type="Int32" />
+    <Property Name="LineaIDPadre" Type="Int32" />
+    <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CentroCostoID" Type="Int32" />
+    <Property Name="SubCentroCostoID" Type="Int32" />
+    <Property Name="CuentaIDDescuentoNOSRI" Type="Int32" />
+    <Property Name="CuentaIDActivoFijo" Type="Int32" />
+    <Property Name="CuentaIDDepreciacionAcumulada" Type="Int32" />
+    <Property Name="CuentaIDGastoDepreciacion" Type="Int32" />
+    <Property Name="CuentaIDDeterioroAcumulado" Type="Int32" />
+    <Property Name="CuentaIDGastoDeterioro" Type="Int32" />
+    <Property Name="CuentaIDBajas" Type="Int32" />
+    <Property Name="TipoItemID" Type="Int32" />
+    <Property Name="CuentaIDRevalorizacion" Type="Int32" />
+    <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VidaUtilAños" Type="Int32" />
+    <Property Name="CuentaIDCostoActivoFijo" Type="Int32" />
+    <Property Name="PorcValorResidual" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CuentaIDAplicacionCostos" Type="Int32" />
+    <Property Name="CuentaIDVentaAF" Type="Int32" />
+    <Property Name="CuentaIDVentaNoSRIAF" Type="Int32" />
+    <Property Name="CuentaIDAplicacionCostosOT" Type="Int32" />
+    <NavigationProperty Name="Items" Relationship="Self.FK_dbo_Items_dbo_Lineas_LineaId" FromRole="Lineas" ToRole="Items" />
+    <NavigationProperty Name="Items1" Relationship="Self.FK_Items_SubLineas" FromRole="Lineas" ToRole="Items" />
+    <NavigationProperty Name="Lineas1" Relationship="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" FromRole="Lineas" ToRole="Lineas1" />
+    <NavigationProperty Name="Lineas2" Relationship="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" FromRole="Lineas1" ToRole="Lineas" />
+  </EntityType>
+  <Association Name="FK_dbo_Items_dbo_Lineas_LineaId">
+    <End Role="Lineas" Type="Self.Lineas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas">
+        <PropertyRef Name="LineaID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="LineaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_SubLineas">
+    <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas">
+        <PropertyRef Name="LineaID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="SubLineaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+    <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+    <End Role="Lineas1" Type="Self.Lineas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lineas">
+        <PropertyRef Name="LineaID" />
+      </Principal>
+      <Dependent Role="Lineas1">
+        <PropertyRef Name="LineaIDPadre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SACO_0990868107001" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Items" EntityType="Self.Items" />
+    <EntitySet Name="Lineas" EntityType="Self.Lineas" />
+    <AssociationSet Name="FK_dbo_Items_dbo_Lineas_LineaId" Association="Self.FK_dbo_Items_dbo_Lineas_LineaId">
+      <End Role="Lineas" EntitySet="Lineas" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_SubLineas" Association="Self.FK_Items_SubLineas">
+      <End Role="Lineas" EntitySet="Lineas" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" Association="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+      <End Role="Lineas" EntitySet="Lineas" />
+      <End Role="Lineas1" EntitySet="Lineas" />
+    </AssociationSet>
+    <EntitySet Name="Bodegas" EntityType="SACO_0990868107001Model.Bodegas" />
+  </EntityContainer>
+  <EntityType Name="Bodegas">
+    <Key>
+      <PropertyRef Name="BodegaID" />
+    </Key>
+    <Property Name="BodegaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CentroCostoID" Type="Int32" />
+    <Property Name="RUC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CargarTodoAlFacturar" Type="Boolean" Nullable="false" />
+    <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="NoDisponibleVenta" Type="Boolean" />
+    <Property Name="Telefonos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocalidadIDPais" Type="Int32" />
+    <Property Name="LocalidadIDCiudad" Type="Int32" />
+    <Property Name="CuentaContableID" Type="Int32" />
+    <Property Name="TipoBodega" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="EsDeInventario" Type="Boolean" />
+    <Property Name="EsDeActivoFijo" Type="Boolean" />
+    <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PersonaID" Type="Int32" />
+    <Property Name="DireccionID" Type="Int32" />
+    <Property Name="EsDeConsignacion" Type="Boolean" />
+  </EntityType>
+</Schema>

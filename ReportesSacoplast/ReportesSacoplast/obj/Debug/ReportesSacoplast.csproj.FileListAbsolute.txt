@@ -30,3 +30,14 @@ C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\Reportes
 C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\ReportesSacoplast.csproj.CopyComplete
 C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\ReportesSacoplast.exe
 C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\ReportesSacoplast.pdb
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\bin\Debug\ReportesSacoplast.exe.config
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\Pages\Dialog\BuscaItemPage.g.cs
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\Pages\KardexPage.g.cs
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\ReportesSacoplast_Content.g.cs
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\ReportesSacoplast_MarkupCompile.lref
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\Pages\Dialog\BuscaItemPage.baml
+C:\Users\Administrator\source\repos\ReportesSacoplast\ReportesSacoplast\ReportesSacoplast\obj\Debug\Pages\KardexPage.baml
