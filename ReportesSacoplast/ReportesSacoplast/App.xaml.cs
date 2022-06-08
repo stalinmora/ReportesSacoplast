@@ -13,5 +13,9 @@ namespace ReportesSacoplast
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NjQ3OTE1QDMyMzAyZTMxMmUzMG5iTlExMGkvMGMrUHBVdFdzeHVsK3VpKzlxTVNudlAyZ3l5eHJWNFQrWjg9");
+        }
     }
 }

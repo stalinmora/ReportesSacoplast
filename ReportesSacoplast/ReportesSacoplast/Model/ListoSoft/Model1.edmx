@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SACO_0990868107001Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bodegas">
+          <Key>
+            <PropertyRef Name="BodegaID" />
+          </Key>
+          <Property Name="BodegaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="CentroCostoID" Type="int" />
+          <Property Name="RUC" Type="varchar" MaxLength="13" />
+          <Property Name="Direccion" Type="varchar" MaxLength="300" />
+          <Property Name="CargarTodoAlFacturar" Type="bit" Nullable="false" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="NoDisponibleVenta" Type="bit" />
+          <Property Name="Telefonos" Type="varchar" MaxLength="100" />
+          <Property Name="LocalidadIDPais" Type="int" />
+          <Property Name="LocalidadIDCiudad" Type="int" />
+          <Property Name="CuentaContableID" Type="int" />
+          <Property Name="TipoBodega" Type="char" MaxLength="2" />
+          <Property Name="EsDeInventario" Type="bit" />
+          <Property Name="EsDeActivoFijo" Type="bit" />
+          <Property Name="IDConsolidado" Type="varchar" MaxLength="100" />
+          <Property Name="PersonaID" Type="int" />
+          <Property Name="DireccionID" Type="int" />
+          <Property Name="EsDeConsignacion" Type="bit" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+          <Property Name="Caracteristicas" Type="nvarchar" MaxLength="300" />
+          <Property Name="LineaId" Type="int" Nullable="false" />
+          <Property Name="GrabaIVA" Type="bit" Nullable="false" />
+          <Property Name="Kilos" Type="numeric" Precision="10" Scale="6" />
+          <Property Name="Embal1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Reemplazos" Type="nvarchar(max)" />
+          <Property Name="StockActual" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="StockMinimo" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="StockNoVenta" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="StockEnTransito" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="StockReservado" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="StockEnTransitoPrevendido" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CostoTotal" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="CostoPromedio" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="UltimoCosto" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="CostoFOB" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" />
+          <Property Name="TipoItemID" Type="int" Nullable="false" />
+          <Property Name="UnidadId" Type="int" />
+          <Property Name="Embal2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MarcaId" Type="int" />
+          <Property Name="ControlaSeries" Type="bit" />
+          <Property Name="TallaID" Type="int" />
+          <Property Name="ColorID" Type="int" />
+          <Property Name="Precio1" Type="money" />
+          <Property Name="Precio2" Type="money" />
+          <Property Name="Precio3" Type="money" />
+          <Property Name="Precio4" Type="money" />
+          <Property Name="Precio5" Type="money" />
+          <Property Name="PorcUtilidad1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad5" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima5" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DolarImportacion" Type="money" />
+          <Property Name="ProveedoID" Type="int" />
+          <Property Name="Ubicacion" Type="nvarchar(max)" />
+          <Property Name="Caduca" Type="nvarchar(max)" />
+          <Property Name="Temporada" Type="nvarchar(max)" />
+          <Property Name="ArancelPorc" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Genero" Type="nvarchar(max)" />
+          <Property Name="CantMinimaDesc1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc5" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc5" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ValorOriginal" Type="money" />
+          <Property Name="ValorResidual" Type="money" />
+          <Property Name="VidaUtil" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeprecAcumulada" Type="money" />
+          <Property Name="DeprecAnual" Type="money" />
+          <Property Name="FechaAdqusicion" Type="datetime" />
+          <Property Name="FechaBase" Type="datetime" />
+          <Property Name="UnidadMedida_UnidadMedidaID" Type="int" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="Catalogo" Type="varchar" MaxLength="200" />
+          <Property Name="BodegaID" Type="int" />
+          <Property Name="FechaBaja" Type="datetime" />
+          <Property Name="ArancelValor" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SucursalID" Type="int" />
+          <Property Name="PrimeraCompra" Type="datetime" />
+          <Property Name="UltimaCompra" Type="datetime" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="RutaImagen" Type="varchar" MaxLength="250" />
+          <Property Name="Imagen" Type="varchar" MaxLength="250" />
+          <Property Name="TipoControlInventario" Type="char" MaxLength="1" />
+          <Property Name="CantidadUnitariaComponentes" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="SubLineaID" Type="int" />
+          <Property Name="BodegaIDUbicacion" Type="int" />
+          <Property Name="ValorActual" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="IDConsolidado" Type="varchar" MaxLength="100" />
+          <Property Name="UnidadMedidaIDAlterna" Type="int" />
+          <Property Name="FactorDeConversion" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="EsGasto" Type="bit" />
+          <Property Name="DepreciacionInicialAcumulada" Type="numeric" Precision="16" Scale="6" />
+          <Property Name="FechaInicialDepreciacion" Type="datetime" />
+          <Property Name="PartidaArancelariaID" Type="int" />
+          <Property Name="StockPorProducir" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="StockParaProducir" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="StockMaximo" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CasilleroICEID" Type="int" />
+          <Property Name="FactorProrrateoTransformaciones" Type="numeric" Precision="14" Scale="6" />
+          <Property Name="EstaDadoBaja" Type="bit" />
+          <Property Name="CostoReposicion" Type="numeric" Precision="18" Scale="6" />
+        </EntityType>
+        <EntityType Name="Lineas">
+          <Key>
+            <PropertyRef Name="LineaID" />
+          </Key>
+          <Property Name="LineaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="CuentaIDVenta" Type="int" />
+          <Property Name="CuentaIDVentaNoSRI" Type="int" />
+          <Property Name="CuentaIDCosto" Type="int" />
+          <Property Name="CuentaIDDescuento" Type="int" />
+          <Property Name="CuentaIDInventario" Type="int" />
+          <Property Name="CuentaIDGastos" Type="int" />
+          <Property Name="LineaIDPadre" Type="int" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="CentroCostoID" Type="int" />
+          <Property Name="SubCentroCostoID" Type="int" />
+          <Property Name="CuentaIDDescuentoNOSRI" Type="int" />
+          <Property Name="CuentaIDActivoFijo" Type="int" />
+          <Property Name="CuentaIDDepreciacionAcumulada" Type="int" />
+          <Property Name="CuentaIDGastoDepreciacion" Type="int" />
+          <Property Name="CuentaIDDeterioroAcumulado" Type="int" />
+          <Property Name="CuentaIDGastoDeterioro" Type="int" />
+          <Property Name="CuentaIDBajas" Type="int" />
+          <Property Name="TipoItemID" Type="int" />
+          <Property Name="CuentaIDRevalorizacion" Type="int" />
+          <Property Name="IDConsolidado" Type="varchar" MaxLength="100" />
+          <Property Name="VidaUtilAños" Type="int" />
+          <Property Name="CuentaIDCostoActivoFijo" Type="int" />
+          <Property Name="PorcValorResidual" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="CuentaIDAplicacionCostos" Type="int" />
+          <Property Name="CuentaIDVentaAF" Type="int" />
+          <Property Name="CuentaIDVentaNoSRIAF" Type="int" />
+          <Property Name="CuentaIDAplicacionCostosOT" Type="int" />
+        </EntityType>
+        <Association Name="FK_dbo_Items_dbo_Lineas_LineaId">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="LineaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+          <End Role="Lineas1" Type="Self.Lineas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Lineas1">
+              <PropertyRef Name="LineaIDPadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Items_SubLineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="SubLineaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SACO_0990868107001ModelStoreContainer">
+          <EntitySet Name="Bodegas" EntityType="Self.Bodegas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lineas" EntityType="Self.Lineas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Items_dbo_Lineas_LineaId" Association="Self.FK_dbo_Items_dbo_Lineas_LineaId">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" Association="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Lineas1" EntitySet="Lineas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Items_SubLineas" Association="Self.FK_Items_SubLineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SACO_0990868107001Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Caracteristicas" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="LineaId" Type="Int32" Nullable="false" />
+          <Property Name="GrabaIVA" Type="Boolean" Nullable="false" />
+          <Property Name="Kilos" Type="Decimal" Precision="10" Scale="6" />
+          <Property Name="Embal1" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Reemplazos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StockActual" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="StockMinimo" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="StockNoVenta" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="StockEnTransito" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="StockReservado" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="StockEnTransitoPrevendido" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CostoTotal" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="CostoPromedio" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="UltimoCosto" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="CostoFOB" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="TipoItemID" Type="Int32" Nullable="false" />
+          <Property Name="UnidadId" Type="Int32" />
+          <Property Name="Embal2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MarcaId" Type="Int32" />
+          <Property Name="ControlaSeries" Type="Boolean" />
+          <Property Name="TallaID" Type="Int32" />
+          <Property Name="ColorID" Type="Int32" />
+          <Property Name="Precio1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Precio2" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Precio3" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Precio4" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Precio5" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PorcUtilidad1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcUtilidad5" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinima5" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DolarImportacion" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ProveedoID" Type="Int32" />
+          <Property Name="Ubicacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Caduca" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Temporada" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ArancelPorc" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Genero" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CantMinimaDesc1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CantMinimaDesc5" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentDesc5" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ValorOriginal" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ValorResidual" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="VidaUtil" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeprecAcumulada" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DeprecAnual" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FechaAdqusicion" Type="DateTime" Precision="3" />
+          <Property Name="FechaBase" Type="DateTime" Precision="3" />
+          <Property Name="UnidadMedida_UnidadMedidaID" Type="Int32" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Catalogo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BodegaID" Type="Int32" />
+          <Property Name="FechaBaja" Type="DateTime" Precision="3" />
+          <Property Name="ArancelValor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SucursalID" Type="Int32" />
+          <Property Name="PrimeraCompra" Type="DateTime" Precision="3" />
+          <Property Name="UltimaCompra" Type="DateTime" Precision="3" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="RutaImagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TipoControlInventario" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CantidadUnitariaComponentes" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="SubLineaID" Type="Int32" />
+          <Property Name="BodegaIDUbicacion" Type="Int32" />
+          <Property Name="ValorActual" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UnidadMedidaIDAlterna" Type="Int32" />
+          <Property Name="FactorDeConversion" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="EsGasto" Type="Boolean" />
+          <Property Name="DepreciacionInicialAcumulada" Type="Decimal" Precision="16" Scale="6" />
+          <Property Name="FechaInicialDepreciacion" Type="DateTime" Precision="3" />
+          <Property Name="PartidaArancelariaID" Type="Int32" />
+          <Property Name="StockPorProducir" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="StockParaProducir" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="StockMaximo" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CasilleroICEID" Type="Int32" />
+          <Property Name="FactorProrrateoTransformaciones" Type="Decimal" Precision="14" Scale="6" />
+          <Property Name="EstaDadoBaja" Type="Boolean" />
+          <Property Name="CostoReposicion" Type="Decimal" Precision="18" Scale="6" />
+          <NavigationProperty Name="Lineas" Relationship="Self.FK_dbo_Items_dbo_Lineas_LineaId" FromRole="Items" ToRole="Lineas" />
+          <NavigationProperty Name="Lineas1" Relationship="Self.FK_Items_SubLineas" FromRole="Items" ToRole="Lineas" />
+        </EntityType>
+        <EntityType Name="Lineas">
+          <Key>
+            <PropertyRef Name="LineaID" />
+          </Key>
+          <Property Name="LineaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CuentaIDVenta" Type="Int32" />
+          <Property Name="CuentaIDVentaNoSRI" Type="Int32" />
+          <Property Name="CuentaIDCosto" Type="Int32" />
+          <Property Name="CuentaIDDescuento" Type="Int32" />
+          <Property Name="CuentaIDInventario" Type="Int32" />
+          <Property Name="CuentaIDGastos" Type="Int32" />
+          <Property Name="LineaIDPadre" Type="Int32" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CentroCostoID" Type="Int32" />
+          <Property Name="SubCentroCostoID" Type="Int32" />
+          <Property Name="CuentaIDDescuentoNOSRI" Type="Int32" />
+          <Property Name="CuentaIDActivoFijo" Type="Int32" />
+          <Property Name="CuentaIDDepreciacionAcumulada" Type="Int32" />
+          <Property Name="CuentaIDGastoDepreciacion" Type="Int32" />
+          <Property Name="CuentaIDDeterioroAcumulado" Type="Int32" />
+          <Property Name="CuentaIDGastoDeterioro" Type="Int32" />
+          <Property Name="CuentaIDBajas" Type="Int32" />
+          <Property Name="TipoItemID" Type="Int32" />
+          <Property Name="CuentaIDRevalorizacion" Type="Int32" />
+          <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VidaUtilAños" Type="Int32" />
+          <Property Name="CuentaIDCostoActivoFijo" Type="Int32" />
+          <Property Name="PorcValorResidual" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="CuentaIDAplicacionCostos" Type="Int32" />
+          <Property Name="CuentaIDVentaAF" Type="Int32" />
+          <Property Name="CuentaIDVentaNoSRIAF" Type="Int32" />
+          <Property Name="CuentaIDAplicacionCostosOT" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK_dbo_Items_dbo_Lineas_LineaId" FromRole="Lineas" ToRole="Items" />
+          <NavigationProperty Name="Items1" Relationship="Self.FK_Items_SubLineas" FromRole="Lineas" ToRole="Items" />
+          <NavigationProperty Name="Lineas1" Relationship="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" FromRole="Lineas" ToRole="Lineas1" />
+          <NavigationProperty Name="Lineas2" Relationship="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" FromRole="Lineas1" ToRole="Lineas" />
+        </EntityType>
+        <Association Name="FK_dbo_Items_dbo_Lineas_LineaId">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="LineaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Items_SubLineas">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="SubLineaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+          <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
+          <End Role="Lineas1" Type="Self.Lineas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lineas">
+              <PropertyRef Name="LineaID" />
+            </Principal>
+            <Dependent Role="Lineas1">
+              <PropertyRef Name="LineaIDPadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SACO_0990868107001" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Items" EntityType="Self.Items" />
+          <EntitySet Name="Lineas" EntityType="Self.Lineas" />
+          <AssociationSet Name="FK_dbo_Items_dbo_Lineas_LineaId" Association="Self.FK_dbo_Items_dbo_Lineas_LineaId">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Items_SubLineas" Association="Self.FK_Items_SubLineas">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Lineas_dbo_Lineas_LineaIDPadre" Association="Self.FK_dbo_Lineas_dbo_Lineas_LineaIDPadre">
+            <End Role="Lineas" EntitySet="Lineas" />
+            <End Role="Lineas1" EntitySet="Lineas" />
+          </AssociationSet>
+          <EntitySet Name="Bodegas" EntityType="SACO_0990868107001Model.Bodegas" />
+        </EntityContainer>
+        <EntityType Name="Bodegas">
+          <Key>
+            <PropertyRef Name="BodegaID" />
+          </Key>
+          <Property Name="BodegaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CentroCostoID" Type="Int32" />
+          <Property Name="RUC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CargarTodoAlFacturar" Type="Boolean" Nullable="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="NoDisponibleVenta" Type="Boolean" />
+          <Property Name="Telefonos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LocalidadIDPais" Type="Int32" />
+          <Property Name="LocalidadIDCiudad" Type="Int32" />
+          <Property Name="CuentaContableID" Type="Int32" />
+          <Property Name="TipoBodega" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="EsDeInventario" Type="Boolean" />
+          <Property Name="EsDeActivoFijo" Type="Boolean" />
+          <Property Name="IDConsolidado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PersonaID" Type="Int32" />
+          <Property Name="DireccionID" Type="Int32" />
+          <Property Name="EsDeConsignacion" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SACO_0990868107001ModelStoreContainer" CdmEntityContainer="SACO_0990868107001">
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="SACO_0990868107001Model.Items">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+                <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+                <ScalarProperty Name="GrabaIVA" ColumnName="GrabaIVA" />
+                <ScalarProperty Name="Kilos" ColumnName="Kilos" />
+                <ScalarProperty Name="Embal1" ColumnName="Embal1" />
+                <ScalarProperty Name="Reemplazos" ColumnName="Reemplazos" />
+                <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+                <ScalarProperty Name="StockNoVenta" ColumnName="StockNoVenta" />
+                <ScalarProperty Name="StockEnTransito" ColumnName="StockEnTransito" />
+                <ScalarProperty Name="StockReservado" ColumnName="StockReservado" />
+                <ScalarProperty Name="StockEnTransitoPrevendido" ColumnName="StockEnTransitoPrevendido" />
+                <ScalarProperty Name="CostoTotal" ColumnName="CostoTotal" />
+                <ScalarProperty Name="CostoPromedio" ColumnName="CostoPromedio" />
+                <ScalarProperty Name="UltimoCosto" ColumnName="UltimoCosto" />
+                <ScalarProperty Name="CostoFOB" ColumnName="CostoFOB" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+                <ScalarProperty Name="UnidadId" ColumnName="UnidadId" />
+                <ScalarProperty Name="Embal2" ColumnName="Embal2" />
+                <ScalarProperty Name="MarcaId" ColumnName="MarcaId" />
+                <ScalarProperty Name="ControlaSeries" ColumnName="ControlaSeries" />
+                <ScalarProperty Name="TallaID" ColumnName="TallaID" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="Precio1" ColumnName="Precio1" />
+                <ScalarProperty Name="Precio2" ColumnName="Precio2" />
+                <ScalarProperty Name="Precio3" ColumnName="Precio3" />
+                <ScalarProperty Name="Precio4" ColumnName="Precio4" />
+                <ScalarProperty Name="Precio5" ColumnName="Precio5" />
+                <ScalarProperty Name="PorcUtilidad1" ColumnName="PorcUtilidad1" />
+                <ScalarProperty Name="PorcUtilidad2" ColumnName="PorcUtilidad2" />
+                <ScalarProperty Name="PorcUtilidad3" ColumnName="PorcUtilidad3" />
+                <ScalarProperty Name="PorcUtilidad4" ColumnName="PorcUtilidad4" />
+                <ScalarProperty Name="PorcUtilidad5" ColumnName="PorcUtilidad5" />
+                <ScalarProperty Name="CantMinima1" ColumnName="CantMinima1" />
+                <ScalarProperty Name="CantMinima2" ColumnName="CantMinima2" />
+                <ScalarProperty Name="CantMinima3" ColumnName="CantMinima3" />
+                <ScalarProperty Name="CantMinima4" ColumnName="CantMinima4" />
+                <ScalarProperty Name="CantMinima5" ColumnName="CantMinima5" />
+                <ScalarProperty Name="DolarImportacion" ColumnName="DolarImportacion" />
+                <ScalarProperty Name="ProveedoID" ColumnName="ProveedoID" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Caduca" ColumnName="Caduca" />
+                <ScalarProperty Name="Temporada" ColumnName="Temporada" />
+                <ScalarProperty Name="ArancelPorc" ColumnName="ArancelPorc" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="CantMinimaDesc1" ColumnName="CantMinimaDesc1" />
+                <ScalarProperty Name="CantMinimaDesc2" ColumnName="CantMinimaDesc2" />
+                <ScalarProperty Name="CantMinimaDesc3" ColumnName="CantMinimaDesc3" />
+                <ScalarProperty Name="CantMinimaDesc4" ColumnName="CantMinimaDesc4" />
+                <ScalarProperty Name="CantMinimaDesc5" ColumnName="CantMinimaDesc5" />
+                <ScalarProperty Name="PorcentDesc1" ColumnName="PorcentDesc1" />
+                <ScalarProperty Name="PorcentDesc2" ColumnName="PorcentDesc2" />
+                <ScalarProperty Name="PorcentDesc3" ColumnName="PorcentDesc3" />
+                <ScalarProperty Name="PorcentDesc4" ColumnName="PorcentDesc4" />
+                <ScalarProperty Name="PorcentDesc5" ColumnName="PorcentDesc5" />
+                <ScalarProperty Name="ValorOriginal" ColumnName="ValorOriginal" />
+                <ScalarProperty Name="ValorResidual" ColumnName="ValorResidual" />
+                <ScalarProperty Name="VidaUtil" ColumnName="VidaUtil" />
+                <ScalarProperty Name="DeprecAcumulada" ColumnName="DeprecAcumulada" />
+                <ScalarProperty Name="DeprecAnual" ColumnName="DeprecAnual" />
+                <ScalarProperty Name="FechaAdqusicion" ColumnName="FechaAdqusicion" />
+                <ScalarProperty Name="FechaBase" ColumnName="FechaBase" />
+                <ScalarProperty Name="UnidadMedida_UnidadMedidaID" ColumnName="UnidadMedida_UnidadMedidaID" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="Catalogo" ColumnName="Catalogo" />
+                <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+                <ScalarProperty Name="FechaBaja" ColumnName="FechaBaja" />
+                <ScalarProperty Name="ArancelValor" ColumnName="ArancelValor" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="PrimeraCompra" ColumnName="PrimeraCompra" />
+                <ScalarProperty Name="UltimaCompra" ColumnName="UltimaCompra" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="RutaImagen" ColumnName="RutaImagen" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="TipoControlInventario" ColumnName="TipoControlInventario" />
+                <ScalarProperty Name="CantidadUnitariaComponentes" ColumnName="CantidadUnitariaComponentes" />
+                <ScalarProperty Name="SubLineaID" ColumnName="SubLineaID" />
+                <ScalarProperty Name="BodegaIDUbicacion" ColumnName="BodegaIDUbicacion" />
+                <ScalarProperty Name="ValorActual" ColumnName="ValorActual" />
+                <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+                <ScalarProperty Name="UnidadMedidaIDAlterna" ColumnName="UnidadMedidaIDAlterna" />
+                <ScalarProperty Name="FactorDeConversion" ColumnName="FactorDeConversion" />
+                <ScalarProperty Name="EsGasto" ColumnName="EsGasto" />
+                <ScalarProperty Name="DepreciacionInicialAcumulada" ColumnName="DepreciacionInicialAcumulada" />
+                <ScalarProperty Name="FechaInicialDepreciacion" ColumnName="FechaInicialDepreciacion" />
+                <ScalarProperty Name="PartidaArancelariaID" ColumnName="PartidaArancelariaID" />
+                <ScalarProperty Name="StockPorProducir" ColumnName="StockPorProducir" />
+                <ScalarProperty Name="StockParaProducir" ColumnName="StockParaProducir" />
+                <ScalarProperty Name="StockMaximo" ColumnName="StockMaximo" />
+                <ScalarProperty Name="CasilleroICEID" ColumnName="CasilleroICEID" />
+                <ScalarProperty Name="FactorProrrateoTransformaciones" ColumnName="FactorProrrateoTransformaciones" />
+                <ScalarProperty Name="EstaDadoBaja" ColumnName="EstaDadoBaja" />
+                <ScalarProperty Name="CostoReposicion" ColumnName="CostoReposicion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lineas">
+            <EntityTypeMapping TypeName="SACO_0990868107001Model.Lineas">
+              <MappingFragment StoreEntitySet="Lineas">
+                <ScalarProperty Name="LineaID" ColumnName="LineaID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CuentaIDVenta" ColumnName="CuentaIDVenta" />
+                <ScalarProperty Name="CuentaIDVentaNoSRI" ColumnName="CuentaIDVentaNoSRI" />
+                <ScalarProperty Name="CuentaIDCosto" ColumnName="CuentaIDCosto" />
+                <ScalarProperty Name="CuentaIDDescuento" ColumnName="CuentaIDDescuento" />
+                <ScalarProperty Name="CuentaIDInventario" ColumnName="CuentaIDInventario" />
+                <ScalarProperty Name="CuentaIDGastos" ColumnName="CuentaIDGastos" />
+                <ScalarProperty Name="LineaIDPadre" ColumnName="LineaIDPadre" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="CentroCostoID" ColumnName="CentroCostoID" />
+                <ScalarProperty Name="SubCentroCostoID" ColumnName="SubCentroCostoID" />
+                <ScalarProperty Name="CuentaIDDescuentoNOSRI" ColumnName="CuentaIDDescuentoNOSRI" />
+                <ScalarProperty Name="CuentaIDActivoFijo" ColumnName="CuentaIDActivoFijo" />
+                <ScalarProperty Name="CuentaIDDepreciacionAcumulada" ColumnName="CuentaIDDepreciacionAcumulada" />
+                <ScalarProperty Name="CuentaIDGastoDepreciacion" ColumnName="CuentaIDGastoDepreciacion" />
+                <ScalarProperty Name="CuentaIDDeterioroAcumulado" ColumnName="CuentaIDDeterioroAcumulado" />
+                <ScalarProperty Name="CuentaIDGastoDeterioro" ColumnName="CuentaIDGastoDeterioro" />
+                <ScalarProperty Name="CuentaIDBajas" ColumnName="CuentaIDBajas" />
+                <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+                <ScalarProperty Name="CuentaIDRevalorizacion" ColumnName="CuentaIDRevalorizacion" />
+                <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+                <ScalarProperty Name="VidaUtilAños" ColumnName="VidaUtilAños" />
+                <ScalarProperty Name="CuentaIDCostoActivoFijo" ColumnName="CuentaIDCostoActivoFijo" />
+                <ScalarProperty Name="PorcValorResidual" ColumnName="PorcValorResidual" />
+                <ScalarProperty Name="CuentaIDAplicacionCostos" ColumnName="CuentaIDAplicacionCostos" />
+                <ScalarProperty Name="CuentaIDVentaAF" ColumnName="CuentaIDVentaAF" />
+                <ScalarProperty Name="CuentaIDVentaNoSRIAF" ColumnName="CuentaIDVentaNoSRIAF" />
+                <ScalarProperty Name="CuentaIDAplicacionCostosOT" ColumnName="CuentaIDAplicacionCostosOT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bodegas">
+            <EntityTypeMapping TypeName="SACO_0990868107001Model.Bodegas">
+              <MappingFragment StoreEntitySet="Bodegas">
+                <ScalarProperty Name="EsDeConsignacion" ColumnName="EsDeConsignacion" />
+                <ScalarProperty Name="DireccionID" ColumnName="DireccionID" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+                <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+                <ScalarProperty Name="EsDeActivoFijo" ColumnName="EsDeActivoFijo" />
+                <ScalarProperty Name="EsDeInventario" ColumnName="EsDeInventario" />
+                <ScalarProperty Name="TipoBodega" ColumnName="TipoBodega" />
+                <ScalarProperty Name="CuentaContableID" ColumnName="CuentaContableID" />
+                <ScalarProperty Name="LocalidadIDCiudad" ColumnName="LocalidadIDCiudad" />
+                <ScalarProperty Name="LocalidadIDPais" ColumnName="LocalidadIDPais" />
+                <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+                <ScalarProperty Name="NoDisponibleVenta" ColumnName="NoDisponibleVenta" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="CargarTodoAlFacturar" ColumnName="CargarTodoAlFacturar" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="CentroCostoID" ColumnName="CentroCostoID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/listosoft/model1.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/listosoft/model1.tt")]
 
 
