@@ -14,6 +14,12 @@ namespace ReportesSacoplast.Model.ListoSoft
     
     public partial class Items
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Items()
+        {
+            this.Items1 = new HashSet<Items>();
+        }
+    
         public int ItemID { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
@@ -111,8 +117,12 @@ namespace ReportesSacoplast.Model.ListoSoft
         public Nullable<decimal> FactorProrrateoTransformaciones { get; set; }
         public Nullable<bool> EstaDadoBaja { get; set; }
         public Nullable<decimal> CostoReposicion { get; set; }
+        public Nullable<int> ItemIDComodin { get; set; }
     
         public virtual Lineas Lineas { get; set; }
         public virtual Lineas Lineas1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Items> Items1 { get; set; }
+        public virtual Items Items2 { get; set; }
     }
 }

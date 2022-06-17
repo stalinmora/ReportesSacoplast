@@ -1,12 +1,51 @@
-﻿<Window x:Class="ReportesSacoplast.Pages.Dialog.BuscaItemPage"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:ReportesSacoplast.Pages.Dialog"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="frmItem" x:Class="ReportesSacoplast.Pages.Dialog.BuscaItemPage"
         mc:Ignorable="d"
-        Title="BuscaItemPage" Height="450" Width="800">
+        Title="BUSQUEDA" Height="450" Width="895" DataContext="{Binding BuscarItem, Source={StaticResource Locator}}" ResizeMode="NoResize" Icon="/App.ico" ShowInTaskbar="False">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="388*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <Button Command="{Binding SaveItemCommand}" CommandParameter="{Binding ElementName=frmItem}"  HorizontalAlignment="Left" Margin="650,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="98" Height="31">
+            <Grid Height="26" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="182"/>
+                </Grid.ColumnDefinitions>
+                <iconPacks:Codicons Kind="Check" Height="22" Width="22"/>
+                <Label Grid.Column="1" Content="ACEPTAR" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Center" Width="62" Height="26"/>
+            </Grid>
+        </Button>
+        <Button Margin="761,0,9,0" Grid.Row="1" VerticalAlignment="Center" RenderTransformOrigin="0.496,-0.189" Height="31">
+            <Grid Height="26" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="182"/>
+                </Grid.ColumnDefinitions>
+                <iconPacks:Codicons Kind="Close" Height="22" Width="22"/>
+                <Label Grid.Column="1" Content="CANCELAR" Margin="0,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Width="68"/>
+            </Grid>
+        </Button>
+        <syncfusion:SfDataGrid ItemsSource="{Binding Items}" SelectedItem="{Binding SelectItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AllowEditing="False" AllowDeleting="False" HorizontalAlignment="Center" Height="367" VerticalAlignment="Center" Width="876" AutoGenerateColumns="False" FontSize="10" AllowFiltering="True">
+            <syncfusion:SfDataGrid.InputBindings>
+                <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding SaveItemCommand}" CommandParameter="{Binding ElementName=frmItem}">
+                    
+                </MouseBinding>
+            </syncfusion:SfDataGrid.InputBindings>
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn Width="60" DisplayBinding="{x:Null}"  FilteredFrom="AdvancedFilter" HeaderText="Id" MappingName="ItemID" TextAlignment="Right" ValueBinding="{x:Null}" />
+                <syncfusion:GridTextColumn Width="80" DisplayBinding="{x:Null}"  FilteredFrom="AdvancedFilter" HeaderText="Codigo" MappingName="Codigo" TextAlignment="Right" ValueBinding="{x:Null}" />
+                <syncfusion:GridTextColumn Width="510" DisplayBinding="{x:Null}"  FilteredFrom="AdvancedFilter" HeaderText="Descripcion" MappingName="Descripcion" TextAlignment="Left" ValueBinding="{x:Null}" />
+                <syncfusion:GridTextColumn Width="70" DisplayBinding="{x:Null}"  FilteredFrom="AdvancedFilter" HeaderText="GrM2" MappingName="Kilos" TextAlignment="Right" ValueBinding="{x:Null}" />
+                <syncfusion:GridTextColumn Width="150" DisplayBinding="{x:Null}"  FilteredFrom="AdvancedFilter" HeaderText="Linea" MappingName="Linea" TextAlignment="Center" ValueBinding="{x:Null}" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
     </Grid>
 </Window>

@@ -2,8 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ReportesSacoplast"
-             StartupUri="Pages/KardexPage.xaml">
+             xmlns:infra="clr-namespace:ReportesSacoplast.Infrastructure"
+             StartupUri="Pages/KardexPage.xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

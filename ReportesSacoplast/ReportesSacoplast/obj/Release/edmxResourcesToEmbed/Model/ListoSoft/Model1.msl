@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SACO_0990868107001ModelStoreContainer" CdmEntityContainer="SACO_0990868107001">
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="SACO_0990868107001Model.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="ItemIDComodin" ColumnName="ItemIDComodin" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+          <ScalarProperty Name="GrabaIVA" ColumnName="GrabaIVA" />
+          <ScalarProperty Name="Kilos" ColumnName="Kilos" />
+          <ScalarProperty Name="Embal1" ColumnName="Embal1" />
+          <ScalarProperty Name="Reemplazos" ColumnName="Reemplazos" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+          <ScalarProperty Name="StockNoVenta" ColumnName="StockNoVenta" />
+          <ScalarProperty Name="StockEnTransito" ColumnName="StockEnTransito" />
+          <ScalarProperty Name="StockReservado" ColumnName="StockReservado" />
+          <ScalarProperty Name="StockEnTransitoPrevendido" ColumnName="StockEnTransitoPrevendido" />
+          <ScalarProperty Name="CostoTotal" ColumnName="CostoTotal" />
+          <ScalarProperty Name="CostoPromedio" ColumnName="CostoPromedio" />
+          <ScalarProperty Name="UltimoCosto" ColumnName="UltimoCosto" />
+          <ScalarProperty Name="CostoFOB" ColumnName="CostoFOB" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+          <ScalarProperty Name="UnidadId" ColumnName="UnidadId" />
+          <ScalarProperty Name="Embal2" ColumnName="Embal2" />
+          <ScalarProperty Name="MarcaId" ColumnName="MarcaId" />
+          <ScalarProperty Name="ControlaSeries" ColumnName="ControlaSeries" />
+          <ScalarProperty Name="TallaID" ColumnName="TallaID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Precio1" ColumnName="Precio1" />
+          <ScalarProperty Name="Precio2" ColumnName="Precio2" />
+          <ScalarProperty Name="Precio3" ColumnName="Precio3" />
+          <ScalarProperty Name="Precio4" ColumnName="Precio4" />
+          <ScalarProperty Name="Precio5" ColumnName="Precio5" />
+          <ScalarProperty Name="PorcUtilidad1" ColumnName="PorcUtilidad1" />
+          <ScalarProperty Name="PorcUtilidad2" ColumnName="PorcUtilidad2" />
+          <ScalarProperty Name="PorcUtilidad3" ColumnName="PorcUtilidad3" />
+          <ScalarProperty Name="PorcUtilidad4" ColumnName="PorcUtilidad4" />
+          <ScalarProperty Name="PorcUtilidad5" ColumnName="PorcUtilidad5" />
+          <ScalarProperty Name="CantMinima1" ColumnName="CantMinima1" />
+          <ScalarProperty Name="CantMinima2" ColumnName="CantMinima2" />
+          <ScalarProperty Name="CantMinima3" ColumnName="CantMinima3" />
+          <ScalarProperty Name="CantMinima4" ColumnName="CantMinima4" />
+          <ScalarProperty Name="CantMinima5" ColumnName="CantMinima5" />
+          <ScalarProperty Name="DolarImportacion" ColumnName="DolarImportacion" />
+          <ScalarProperty Name="ProveedoID" ColumnName="ProveedoID" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Caduca" ColumnName="Caduca" />
+          <ScalarProperty Name="Temporada" ColumnName="Temporada" />
+          <ScalarProperty Name="ArancelPorc" ColumnName="ArancelPorc" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="CantMinimaDesc1" ColumnName="CantMinimaDesc1" />
+          <ScalarProperty Name="CantMinimaDesc2" ColumnName="CantMinimaDesc2" />
+          <ScalarProperty Name="CantMinimaDesc3" ColumnName="CantMinimaDesc3" />
+          <ScalarProperty Name="CantMinimaDesc4" ColumnName="CantMinimaDesc4" />
+          <ScalarProperty Name="CantMinimaDesc5" ColumnName="CantMinimaDesc5" />
+          <ScalarProperty Name="PorcentDesc1" ColumnName="PorcentDesc1" />
+          <ScalarProperty Name="PorcentDesc2" ColumnName="PorcentDesc2" />
+          <ScalarProperty Name="PorcentDesc3" ColumnName="PorcentDesc3" />
+          <ScalarProperty Name="PorcentDesc4" ColumnName="PorcentDesc4" />
+          <ScalarProperty Name="PorcentDesc5" ColumnName="PorcentDesc5" />
+          <ScalarProperty Name="ValorOriginal" ColumnName="ValorOriginal" />
+          <ScalarProperty Name="ValorResidual" ColumnName="ValorResidual" />
+          <ScalarProperty Name="VidaUtil" ColumnName="VidaUtil" />
+          <ScalarProperty Name="DeprecAcumulada" ColumnName="DeprecAcumulada" />
+          <ScalarProperty Name="DeprecAnual" ColumnName="DeprecAnual" />
+          <ScalarProperty Name="FechaAdqusicion" ColumnName="FechaAdqusicion" />
+          <ScalarProperty Name="FechaBase" ColumnName="FechaBase" />
+          <ScalarProperty Name="UnidadMedida_UnidadMedidaID" ColumnName="UnidadMedida_UnidadMedidaID" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Catalogo" ColumnName="Catalogo" />
+          <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+          <ScalarProperty Name="FechaBaja" ColumnName="FechaBaja" />
+          <ScalarProperty Name="ArancelValor" ColumnName="ArancelValor" />
+          <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+          <ScalarProperty Name="PrimeraCompra" ColumnName="PrimeraCompra" />
+          <ScalarProperty Name="UltimaCompra" ColumnName="UltimaCompra" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="RutaImagen" ColumnName="RutaImagen" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="TipoControlInventario" ColumnName="TipoControlInventario" />
+          <ScalarProperty Name="CantidadUnitariaComponentes" ColumnName="CantidadUnitariaComponentes" />
+          <ScalarProperty Name="SubLineaID" ColumnName="SubLineaID" />
+          <ScalarProperty Name="BodegaIDUbicacion" ColumnName="BodegaIDUbicacion" />
+          <ScalarProperty Name="ValorActual" ColumnName="ValorActual" />
+          <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+          <ScalarProperty Name="UnidadMedidaIDAlterna" ColumnName="UnidadMedidaIDAlterna" />
+          <ScalarProperty Name="FactorDeConversion" ColumnName="FactorDeConversion" />
+          <ScalarProperty Name="EsGasto" ColumnName="EsGasto" />
+          <ScalarProperty Name="DepreciacionInicialAcumulada" ColumnName="DepreciacionInicialAcumulada" />
+          <ScalarProperty Name="FechaInicialDepreciacion" ColumnName="FechaInicialDepreciacion" />
+          <ScalarProperty Name="PartidaArancelariaID" ColumnName="PartidaArancelariaID" />
+          <ScalarProperty Name="StockPorProducir" ColumnName="StockPorProducir" />
+          <ScalarProperty Name="StockParaProducir" ColumnName="StockParaProducir" />
+          <ScalarProperty Name="StockMaximo" ColumnName="StockMaximo" />
+          <ScalarProperty Name="CasilleroICEID" ColumnName="CasilleroICEID" />
+          <ScalarProperty Name="FactorProrrateoTransformaciones" ColumnName="FactorProrrateoTransformaciones" />
+          <ScalarProperty Name="EstaDadoBaja" ColumnName="EstaDadoBaja" />
+          <ScalarProperty Name="CostoReposicion" ColumnName="CostoReposicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lineas">
+      <EntityTypeMapping TypeName="SACO_0990868107001Model.Lineas">
+        <MappingFragment StoreEntitySet="Lineas">
+          <ScalarProperty Name="LineaID" ColumnName="LineaID" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CuentaIDVenta" ColumnName="CuentaIDVenta" />
+          <ScalarProperty Name="CuentaIDVentaNoSRI" ColumnName="CuentaIDVentaNoSRI" />
+          <ScalarProperty Name="CuentaIDCosto" ColumnName="CuentaIDCosto" />
+          <ScalarProperty Name="CuentaIDDescuento" ColumnName="CuentaIDDescuento" />
+          <ScalarProperty Name="CuentaIDInventario" ColumnName="CuentaIDInventario" />
+          <ScalarProperty Name="CuentaIDGastos" ColumnName="CuentaIDGastos" />
+          <ScalarProperty Name="LineaIDPadre" ColumnName="LineaIDPadre" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CentroCostoID" ColumnName="CentroCostoID" />
+          <ScalarProperty Name="SubCentroCostoID" ColumnName="SubCentroCostoID" />
+          <ScalarProperty Name="CuentaIDDescuentoNOSRI" ColumnName="CuentaIDDescuentoNOSRI" />
+          <ScalarProperty Name="CuentaIDActivoFijo" ColumnName="CuentaIDActivoFijo" />
+          <ScalarProperty Name="CuentaIDDepreciacionAcumulada" ColumnName="CuentaIDDepreciacionAcumulada" />
+          <ScalarProperty Name="CuentaIDGastoDepreciacion" ColumnName="CuentaIDGastoDepreciacion" />
+          <ScalarProperty Name="CuentaIDDeterioroAcumulado" ColumnName="CuentaIDDeterioroAcumulado" />
+          <ScalarProperty Name="CuentaIDGastoDeterioro" ColumnName="CuentaIDGastoDeterioro" />
+          <ScalarProperty Name="CuentaIDBajas" ColumnName="CuentaIDBajas" />
+          <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+          <ScalarProperty Name="CuentaIDRevalorizacion" ColumnName="CuentaIDRevalorizacion" />
+          <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+          <ScalarProperty Name="VidaUtilAños" ColumnName="VidaUtilAños" />
+          <ScalarProperty Name="CuentaIDCostoActivoFijo" ColumnName="CuentaIDCostoActivoFijo" />
+          <ScalarProperty Name="PorcValorResidual" ColumnName="PorcValorResidual" />
+          <ScalarProperty Name="CuentaIDAplicacionCostos" ColumnName="CuentaIDAplicacionCostos" />
+          <ScalarProperty Name="CuentaIDVentaAF" ColumnName="CuentaIDVentaAF" />
+          <ScalarProperty Name="CuentaIDVentaNoSRIAF" ColumnName="CuentaIDVentaNoSRIAF" />
+          <ScalarProperty Name="CuentaIDAplicacionCostosOT" ColumnName="CuentaIDAplicacionCostosOT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bodegas">
+      <EntityTypeMapping TypeName="SACO_0990868107001Model.Bodegas">
+        <MappingFragment StoreEntitySet="Bodegas">
+          <ScalarProperty Name="EsDeConsignacion" ColumnName="EsDeConsignacion" />
+          <ScalarProperty Name="DireccionID" ColumnName="DireccionID" />
+          <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+          <ScalarProperty Name="IDConsolidado" ColumnName="IDConsolidado" />
+          <ScalarProperty Name="EsDeActivoFijo" ColumnName="EsDeActivoFijo" />
+          <ScalarProperty Name="EsDeInventario" ColumnName="EsDeInventario" />
+          <ScalarProperty Name="TipoBodega" ColumnName="TipoBodega" />
+          <ScalarProperty Name="CuentaContableID" ColumnName="CuentaContableID" />
+          <ScalarProperty Name="LocalidadIDCiudad" ColumnName="LocalidadIDCiudad" />
+          <ScalarProperty Name="LocalidadIDPais" ColumnName="LocalidadIDPais" />
+          <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+          <ScalarProperty Name="NoDisponibleVenta" ColumnName="NoDisponibleVenta" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CargarTodoAlFacturar" ColumnName="CargarTodoAlFacturar" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="CentroCostoID" ColumnName="CentroCostoID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="fGetItems" FunctionName="SACO_0990868107001Model.Store.fGetItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.fGetItems_Result">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="CostoUnitario" ColumnName="CostoUnitario" />
+          <ScalarProperty Name="StockTotal" ColumnName="StockTotal" />
+          <ScalarProperty Name="PVP1" ColumnName="PVP1" />
+          <ScalarProperty Name="PVP2" ColumnName="PVP2" />
+          <ScalarProperty Name="PVP3" ColumnName="PVP3" />
+          <ScalarProperty Name="PVP4" ColumnName="PVP4" />
+          <ScalarProperty Name="PVP5" ColumnName="PVP5" />
+          <ScalarProperty Name="PVP1_IVA" ColumnName="PVP1+IVA" />
+          <ScalarProperty Name="PVP2_IVA" ColumnName="PVP2+IVA" />
+          <ScalarProperty Name="PVP3_IVA" ColumnName="PVP3+IVA" />
+          <ScalarProperty Name="PVP4_IVA" ColumnName="PVP4+IVA" />
+          <ScalarProperty Name="PVP5_IVA" ColumnName="PVP5+IVA" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Catalogo" ColumnName="Catalogo" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+          <ScalarProperty Name="GrabaIVA" ColumnName="GrabaIVA" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="CuentaIDInventario" ColumnName="CuentaIDInventario" />
+          <ScalarProperty Name="CodigoBodega" ColumnName="CodigoBodega" />
+          <ScalarProperty Name="Kilos" ColumnName="Kilos" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="ControlaSeries" ColumnName="ControlaSeries" />
+          <ScalarProperty Name="TipoControlInventario" ColumnName="TipoControlInventario" />
+          <ScalarProperty Name="SubLinea" ColumnName="SubLinea" />
+          <ScalarProperty Name="SubLineaID" ColumnName="SubLineaID" />
+          <ScalarProperty Name="CodUnidad" ColumnName="CodUnidad" />
+          <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+          <ScalarProperty Name="UniAlt" ColumnName="UniAlt" />
+          <ScalarProperty Name="FactorDeConversion" ColumnName="FactorDeConversion" />
+          <ScalarProperty Name="CodigosBarras" ColumnName="CodigosBarras" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="CostoPromedio" ColumnName="CostoPromedio" />
+          <ScalarProperty Name="UltimoCosto" ColumnName="UltimoCosto" />
+          <ScalarProperty Name="CasilleroICEID" ColumnName="CasilleroICEID" />
+          <ScalarProperty Name="Temporada" ColumnName="Temporada" />
+          <ScalarProperty Name="UnidadId" ColumnName="UnidadId" />
+          <ScalarProperty Name="UnidadMedidaIDAlterna" ColumnName="UnidadMedidaIDAlterna" />
+          <ScalarProperty Name="FactorProrrateoTransformaciones" ColumnName="FactorProrrateoTransformaciones" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="PorcentDesc1" ColumnName="PorcentDesc1" />
+          <ScalarProperty Name="StockEnTransito" ColumnName="StockEnTransito" />
+          <ScalarProperty Name="EsInventariable" ColumnName="EsInventariable" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="StockTotal1" ColumnName="StockTotal1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRepKardex" FunctionName="SACO_0990868107001Model.Store.spRepKardex" />
+    <FunctionImportMapping FunctionImportName="GetListKardex" FunctionName="SACO_0990868107001Model.Store.spRepKardex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.spRepKardex_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRepKardexSacoPlast" FunctionName="SACO_0990868107001Model.Store.spRepKardexSacoPlast" />
+    <FunctionImportMapping FunctionImportName="GetListKardexSacoplast" FunctionName="SACO_0990868107001Model.Store.spRepKardexSacoPlast">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.spRepKardex_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

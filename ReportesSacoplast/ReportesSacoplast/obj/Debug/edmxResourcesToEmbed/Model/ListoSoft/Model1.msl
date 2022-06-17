@@ -4,6 +4,19 @@
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="SACO_0990868107001Model.Items">
         <MappingFragment StoreEntitySet="Items">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <ScalarProperty Name="ItemIDComodin" ColumnName="ItemIDComodin" />
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
           <ScalarProperty Name="ItemID" ColumnName="ItemID" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -166,5 +179,88 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <FunctionImportMapping FunctionImportName="fGetItems" FunctionName="SACO_0990868107001Model.Store.fGetItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.fGetItems_Result">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="CostoUnitario" ColumnName="CostoUnitario" />
+          <ScalarProperty Name="StockTotal" ColumnName="StockTotal" />
+          <ScalarProperty Name="PVP1" ColumnName="PVP1" />
+          <ScalarProperty Name="PVP2" ColumnName="PVP2" />
+          <ScalarProperty Name="PVP3" ColumnName="PVP3" />
+          <ScalarProperty Name="PVP4" ColumnName="PVP4" />
+          <ScalarProperty Name="PVP5" ColumnName="PVP5" />
+          <ScalarProperty Name="PVP1_IVA" ColumnName="PVP1+IVA" />
+          <ScalarProperty Name="PVP2_IVA" ColumnName="PVP2+IVA" />
+          <ScalarProperty Name="PVP3_IVA" ColumnName="PVP3+IVA" />
+          <ScalarProperty Name="PVP4_IVA" ColumnName="PVP4+IVA" />
+          <ScalarProperty Name="PVP5_IVA" ColumnName="PVP5+IVA" />
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Catalogo" ColumnName="Catalogo" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+          <ScalarProperty Name="GrabaIVA" ColumnName="GrabaIVA" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="CuentaIDInventario" ColumnName="CuentaIDInventario" />
+          <ScalarProperty Name="CodigoBodega" ColumnName="CodigoBodega" />
+          <ScalarProperty Name="Kilos" ColumnName="Kilos" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="ControlaSeries" ColumnName="ControlaSeries" />
+          <ScalarProperty Name="TipoControlInventario" ColumnName="TipoControlInventario" />
+          <ScalarProperty Name="SubLinea" ColumnName="SubLinea" />
+          <ScalarProperty Name="SubLineaID" ColumnName="SubLineaID" />
+          <ScalarProperty Name="CodUnidad" ColumnName="CodUnidad" />
+          <ScalarProperty Name="TipoItemID" ColumnName="TipoItemID" />
+          <ScalarProperty Name="UniAlt" ColumnName="UniAlt" />
+          <ScalarProperty Name="FactorDeConversion" ColumnName="FactorDeConversion" />
+          <ScalarProperty Name="CodigosBarras" ColumnName="CodigosBarras" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="CostoPromedio" ColumnName="CostoPromedio" />
+          <ScalarProperty Name="UltimoCosto" ColumnName="UltimoCosto" />
+          <ScalarProperty Name="CasilleroICEID" ColumnName="CasilleroICEID" />
+          <ScalarProperty Name="Temporada" ColumnName="Temporada" />
+          <ScalarProperty Name="UnidadId" ColumnName="UnidadId" />
+          <ScalarProperty Name="UnidadMedidaIDAlterna" ColumnName="UnidadMedidaIDAlterna" />
+          <ScalarProperty Name="FactorProrrateoTransformaciones" ColumnName="FactorProrrateoTransformaciones" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="PorcentDesc1" ColumnName="PorcentDesc1" />
+          <ScalarProperty Name="StockEnTransito" ColumnName="StockEnTransito" />
+          <ScalarProperty Name="EsInventariable" ColumnName="EsInventariable" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="StockTotal1" ColumnName="StockTotal1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRepKardex" FunctionName="SACO_0990868107001Model.Store.spRepKardex" />
+    <FunctionImportMapping FunctionImportName="GetListKardex" FunctionName="SACO_0990868107001Model.Store.spRepKardex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.spRepKardex_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRepKardexSacoPlast" FunctionName="SACO_0990868107001Model.Store.spRepKardexSacoPlast" />
+    <FunctionImportMapping FunctionImportName="GetListKardexSacoplast" FunctionName="SACO_0990868107001Model.Store.spRepKardexSacoPlast">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SACO_0990868107001Model.spRepKardex_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   </EntityContainerMapping>
 </Mapping>

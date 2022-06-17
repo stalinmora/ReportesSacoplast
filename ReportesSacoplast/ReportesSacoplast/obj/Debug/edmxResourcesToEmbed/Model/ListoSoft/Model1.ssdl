@@ -126,6 +126,19 @@
     <Property Name="FactorProrrateoTransformaciones" Type="numeric" Precision="14" Scale="6" />
     <Property Name="EstaDadoBaja" Type="bit" />
     <Property Name="CostoReposicion" Type="numeric" Precision="18" Scale="6" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Property Name="ItemIDComodin" Type="int" />
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   </EntityType>
   <EntityType Name="Lineas">
     <Key>
@@ -188,6 +201,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <Association Name="FK_Items_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="Items1" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="Items1">
+        <PropertyRef Name="ItemIDComodin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   <Association Name="FK_Items_SubLineas">
     <End Role="Lineas" Type="Self.Lineas" Multiplicity="0..1" />
     <End Role="Items" Type="Self.Items" Multiplicity="*" />
@@ -200,6 +237,95 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <Function Name="fGetItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BodegaID" Type="int" Mode="In" />
+    <Parameter Name="VerInactivo" Type="bit" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Linea" Type="nvarchar" MaxLength="200" />
+          <Property Name="CostoUnitario" Type="numeric" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="StockTotal" Type="numeric" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="PVP1" Type="money" Nullable="false" />
+          <Property Name="PVP2" Type="money" Nullable="false" />
+          <Property Name="PVP3" Type="money" Nullable="false" />
+          <Property Name="PVP4" Type="money" Nullable="false" />
+          <Property Name="PVP5" Type="money" Nullable="false" />
+          <Property Name="PVP1+IVA" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="PVP2+IVA" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="PVP3+IVA" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="PVP4+IVA" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="PVP5+IVA" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="FechaCaducidad" Type="datetime" />
+          <Property Name="Ubicacion" Type="nvarchar(max)" />
+          <Property Name="Catalogo" Type="varchar" MaxLength="200" />
+          <Property Name="Descuento" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Unidad" Type="nvarchar" MaxLength="200" />
+          <Property Name="GrabaIVA" Type="bit" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="CuentaIDInventario" Type="int" />
+          <Property Name="CodigoBodega" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Kilos" Type="numeric" Precision="10" Scale="6" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="2" />
+          <Property Name="LineaId" Type="int" Nullable="false" />
+          <Property Name="Imagen" Type="varchar" MaxLength="250" />
+          <Property Name="ControlaSeries" Type="bit" />
+          <Property Name="TipoControlInventario" Type="char" MaxLength="1" />
+          <Property Name="SubLinea" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubLineaID" Type="int" />
+          <Property Name="CodUnidad" Type="nvarchar" MaxLength="5" />
+          <Property Name="TipoItemID" Type="int" Nullable="false" />
+          <Property Name="UniAlt" Type="nvarchar" MaxLength="5" />
+          <Property Name="FactorDeConversion" Type="numeric" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="CodigosBarras" Type="nvarchar(max)" />
+          <Property Name="Proveedor" Type="varchar" MaxLength="361" />
+          <Property Name="Marca" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="CostoPromedio" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="UltimoCosto" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="CasilleroICEID" Type="int" />
+          <Property Name="Temporada" Type="nvarchar(max)" />
+          <Property Name="UnidadId" Type="int" />
+          <Property Name="UnidadMedidaIDAlterna" Type="int" />
+          <Property Name="FactorProrrateoTransformaciones" Type="numeric" Precision="14" Scale="6" />
+          <Property Name="Caracteristicas" Type="nvarchar" MaxLength="300" />
+          <Property Name="PorcentDesc1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="StockEnTransito" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="EsInventariable" Type="bit" />
+          <Property Name="StockActual" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="StockTotal1" Type="numeric" Precision="38" Scale="6" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="spRepKardex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fechadesde" Type="datetime" Mode="In" />
+    <Parameter Name="Fechahasta" Type="datetime" Mode="In" />
+    <Parameter Name="Incluircostos" Type="bit" Mode="In" />
+    <Parameter Name="Itemid" Type="int" Mode="In" />
+    <Parameter Name="Bodegaid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRepKardexSacoPlast" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fechadesde" Type="datetime" Mode="In" />
+    <Parameter Name="Fechahasta" Type="datetime" Mode="In" />
+    <Parameter Name="Incluircostos" Type="bit" Mode="In" />
+    <Parameter Name="Itemid" Type="int" Mode="In" />
+    <Parameter Name="Bodegaid" Type="int" Mode="In" />
+  </Function>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   <EntityContainer Name="SACO_0990868107001ModelStoreContainer">
     <EntitySet Name="Bodegas" EntityType="Self.Bodegas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
@@ -212,6 +338,22 @@
       <End Role="Lineas" EntitySet="Lineas" />
       <End Role="Lineas1" EntitySet="Lineas" />
     </AssociationSet>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <AssociationSet Name="FK_Items_Items" Association="Self.FK_Items_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Items1" EntitySet="Items" />
+    </AssociationSet>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
     <AssociationSet Name="FK_Items_SubLineas" Association="Self.FK_Items_SubLineas">
       <End Role="Lineas" EntitySet="Lineas" />
       <End Role="Items" EntitySet="Items" />

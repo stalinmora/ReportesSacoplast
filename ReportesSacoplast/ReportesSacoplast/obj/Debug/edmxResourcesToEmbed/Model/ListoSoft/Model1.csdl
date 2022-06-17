@@ -103,6 +103,21 @@
     <Property Name="CostoReposicion" Type="Decimal" Precision="18" Scale="6" />
     <NavigationProperty Name="Lineas" Relationship="Self.FK_dbo_Items_dbo_Lineas_LineaId" FromRole="Items" ToRole="Lineas" />
     <NavigationProperty Name="Lineas1" Relationship="Self.FK_Items_SubLineas" FromRole="Items" ToRole="Lineas" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Property Name="ItemIDComodin" Type="Int32" />
+    <NavigationProperty Name="Items1" Relationship="SACO_0990868107001Model.FK_Items_Items" FromRole="Items" ToRole="Items1" />
+    <NavigationProperty Name="Items2" Relationship="SACO_0990868107001Model.FK_Items_Items" FromRole="Items1" ToRole="Items" />
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   </EntityType>
   <EntityType Name="Lineas">
     <Key>
@@ -197,6 +212,54 @@
       <End Role="Lineas1" EntitySet="Lineas" />
     </AssociationSet>
     <EntitySet Name="Bodegas" EntityType="SACO_0990868107001Model.Bodegas" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <FunctionImport Name="fGetItems" IsComposable="true" ReturnType="Collection(SACO_0990868107001Model.fGetItems_Result)">
+      <Parameter Name="BodegaID" Mode="In" Type="Int32" />
+      <Parameter Name="VerInactivo" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spRepKardex">
+      <Parameter Name="Fechadesde" Mode="In" Type="DateTime" />
+      <Parameter Name="Fechahasta" Mode="In" Type="DateTime" />
+      <Parameter Name="Incluircostos" Mode="In" Type="Boolean" />
+      <Parameter Name="Itemid" Mode="In" Type="Int32" />
+      <Parameter Name="Bodegaid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetListKardex" ReturnType="Collection(SACO_0990868107001Model.spRepKardex_Result)">
+      <Parameter Name="Fechadesde" Mode="In" Type="DateTime" />
+      <Parameter Name="Fechahasta" Mode="In" Type="DateTime" />
+      <Parameter Name="Incluircostos" Mode="In" Type="Boolean" />
+      <Parameter Name="Itemid" Mode="In" Type="Int32" />
+      <Parameter Name="Bodegaid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <AssociationSet Name="FK_Items_Items" Association="SACO_0990868107001Model.FK_Items_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Items1" EntitySet="Items" />
+    </AssociationSet>
+    <FunctionImport Name="spRepKardexSacoPlast">
+      <Parameter Name="Fechadesde" Mode="In" Type="DateTime" />
+      <Parameter Name="Fechahasta" Mode="In" Type="DateTime" />
+      <Parameter Name="Incluircostos" Mode="In" Type="Boolean" />
+      <Parameter Name="Itemid" Mode="In" Type="Int32" />
+      <Parameter Name="Bodegaid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetListKardexSacoplast" ReturnType="Collection(SACO_0990868107001Model.spRepKardex_Result)">
+      <Parameter Name="Fechadesde" Mode="In" Type="DateTime" />
+      <Parameter Name="Fechahasta" Mode="In" Type="DateTime" />
+      <Parameter Name="Incluircostos" Mode="In" Type="Boolean" />
+      <Parameter Name="Itemid" Mode="In" Type="Int32" />
+      <Parameter Name="Bodegaid" Mode="In" Type="Int32" />
+    </FunctionImport>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
   </EntityContainer>
   <EntityType Name="Bodegas">
     <Key>
@@ -223,4 +286,84 @@
     <Property Name="DireccionID" Type="Int32" />
     <Property Name="EsDeConsignacion" Type="Boolean" />
   </EntityType>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <ComplexType Name="fGetItems_Result">
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Linea" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="CostoUnitario" Nullable="false" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="StockTotal" Nullable="false" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="PVP1" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="PVP2" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="PVP3" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="PVP4" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="PVP5" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="PVP1_IVA" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PVP2_IVA" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PVP3_IVA" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PVP4_IVA" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PVP5_IVA" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="DateTime" Name="FechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" />
+    <Property Type="String" Name="Catalogo" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="Descuento" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Unidad" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="GrabaIVA" Nullable="false" />
+    <Property Type="Int32" Name="ItemID" Nullable="false" />
+    <Property Type="Int32" Name="CuentaIDInventario" Nullable="true" />
+    <Property Type="String" Name="CodigoBodega" Nullable="false" MaxLength="1" />
+    <Property Type="Decimal" Name="Kilos" Nullable="true" Precision="10" Scale="6" />
+    <Property Type="String" Name="Tipo" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="LineaId" Nullable="false" />
+    <Property Type="String" Name="Imagen" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="ControlaSeries" Nullable="true" />
+    <Property Type="String" Name="TipoControlInventario" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="SubLinea" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="SubLineaID" Nullable="true" />
+    <Property Type="String" Name="CodUnidad" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="TipoItemID" Nullable="false" />
+    <Property Type="String" Name="UniAlt" Nullable="true" MaxLength="5" />
+    <Property Type="Decimal" Name="FactorDeConversion" Nullable="false" Precision="18" Scale="6" />
+    <Property Type="String" Name="CodigosBarras" Nullable="true" />
+    <Property Type="String" Name="Proveedor" Nullable="true" MaxLength="361" />
+    <Property Type="String" Name="Marca" Nullable="false" MaxLength="200" />
+    <Property Type="Decimal" Name="CostoPromedio" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="UltimoCosto" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="CasilleroICEID" Nullable="true" />
+    <Property Type="String" Name="Temporada" Nullable="true" />
+    <Property Type="Int32" Name="UnidadId" Nullable="true" />
+    <Property Type="Int32" Name="UnidadMedidaIDAlterna" Nullable="true" />
+    <Property Type="Decimal" Name="FactorProrrateoTransformaciones" Nullable="true" Precision="14" Scale="6" />
+    <Property Type="String" Name="Caracteristicas" Nullable="true" MaxLength="300" />
+    <Property Type="Decimal" Name="PorcentDesc1" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StockEnTransito" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Boolean" Name="EsInventariable" Nullable="true" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="StockTotal1" Nullable="false" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="spRepKardex_Result" />
+  <Association Name="FK_Items_Items">
+    <End Type="SACO_0990868107001Model.Items" Role="Items" Multiplicity="0..1" />
+    <End Type="SACO_0990868107001Model.Items" Role="Items1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="Items1">
+        <PropertyRef Name="ItemIDComodin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
+=======
+>>>>>>> 4896b9b9b53d160329debf8fcef7251062f0b4da
 </Schema>

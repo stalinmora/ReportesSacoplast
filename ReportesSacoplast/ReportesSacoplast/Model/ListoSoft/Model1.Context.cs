@@ -12,6 +12,8 @@ namespace ReportesSacoplast.Model.ListoSoft
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SACO_0990868107001 : DbContext
     {
@@ -28,5 +30,119 @@ namespace ReportesSacoplast.Model.ListoSoft
         public virtual DbSet<Items> Items { get; set; }
         public virtual DbSet<Lineas> Lineas { get; set; }
         public virtual DbSet<Bodegas> Bodegas { get; set; }
+    
+        [DbFunction("SACO_0990868107001", "fGetItems")]
+        public virtual IQueryable<fGetItems_Result> fGetItems(Nullable<int> bodegaID, Nullable<bool> verInactivo)
+        {
+            var bodegaIDParameter = bodegaID.HasValue ?
+                new ObjectParameter("BodegaID", bodegaID) :
+                new ObjectParameter("BodegaID", typeof(int));
+    
+            var verInactivoParameter = verInactivo.HasValue ?
+                new ObjectParameter("VerInactivo", verInactivo) :
+                new ObjectParameter("VerInactivo", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fGetItems_Result>("[SACO_0990868107001].[fGetItems](@BodegaID, @VerInactivo)", bodegaIDParameter, verInactivoParameter);
+        }
+    
+        public virtual int spRepKardex(Nullable<System.DateTime> fechadesde, Nullable<System.DateTime> fechahasta, Nullable<bool> incluircostos, Nullable<int> itemid, Nullable<int> bodegaid)
+        {
+            var fechadesdeParameter = fechadesde.HasValue ?
+                new ObjectParameter("Fechadesde", fechadesde) :
+                new ObjectParameter("Fechadesde", typeof(System.DateTime));
+    
+            var fechahastaParameter = fechahasta.HasValue ?
+                new ObjectParameter("Fechahasta", fechahasta) :
+                new ObjectParameter("Fechahasta", typeof(System.DateTime));
+    
+            var incluircostosParameter = incluircostos.HasValue ?
+                new ObjectParameter("Incluircostos", incluircostos) :
+                new ObjectParameter("Incluircostos", typeof(bool));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var bodegaidParameter = bodegaid.HasValue ?
+                new ObjectParameter("Bodegaid", bodegaid) :
+                new ObjectParameter("Bodegaid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spRepKardex", fechadesdeParameter, fechahastaParameter, incluircostosParameter, itemidParameter, bodegaidParameter);
+        }
+    
+        public virtual ObjectResult<spRepKardex_Result> GetListKardex(Nullable<System.DateTime> fechadesde, Nullable<System.DateTime> fechahasta, Nullable<bool> incluircostos, Nullable<int> itemid, Nullable<int> bodegaid)
+        {
+            var fechadesdeParameter = fechadesde.HasValue ?
+                new ObjectParameter("Fechadesde", fechadesde) :
+                new ObjectParameter("Fechadesde", typeof(System.DateTime));
+    
+            var fechahastaParameter = fechahasta.HasValue ?
+                new ObjectParameter("Fechahasta", fechahasta) :
+                new ObjectParameter("Fechahasta", typeof(System.DateTime));
+    
+            var incluircostosParameter = incluircostos.HasValue ?
+                new ObjectParameter("Incluircostos", incluircostos) :
+                new ObjectParameter("Incluircostos", typeof(bool));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var bodegaidParameter = bodegaid.HasValue ?
+                new ObjectParameter("Bodegaid", bodegaid) :
+                new ObjectParameter("Bodegaid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spRepKardex_Result>("GetListKardex", fechadesdeParameter, fechahastaParameter, incluircostosParameter, itemidParameter, bodegaidParameter);
+        }
+    
+        public virtual int spRepKardexSacoPlast(Nullable<System.DateTime> fechadesde, Nullable<System.DateTime> fechahasta, Nullable<bool> incluircostos, Nullable<int> itemid, Nullable<int> bodegaid)
+        {
+            var fechadesdeParameter = fechadesde.HasValue ?
+                new ObjectParameter("Fechadesde", fechadesde) :
+                new ObjectParameter("Fechadesde", typeof(System.DateTime));
+    
+            var fechahastaParameter = fechahasta.HasValue ?
+                new ObjectParameter("Fechahasta", fechahasta) :
+                new ObjectParameter("Fechahasta", typeof(System.DateTime));
+    
+            var incluircostosParameter = incluircostos.HasValue ?
+                new ObjectParameter("Incluircostos", incluircostos) :
+                new ObjectParameter("Incluircostos", typeof(bool));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var bodegaidParameter = bodegaid.HasValue ?
+                new ObjectParameter("Bodegaid", bodegaid) :
+                new ObjectParameter("Bodegaid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spRepKardexSacoPlast", fechadesdeParameter, fechahastaParameter, incluircostosParameter, itemidParameter, bodegaidParameter);
+        }
+    
+        public virtual ObjectResult<spRepKardex_Result> GetListKardexSacoplast(Nullable<System.DateTime> fechadesde, Nullable<System.DateTime> fechahasta, Nullable<bool> incluircostos, Nullable<int> itemid, Nullable<int> bodegaid)
+        {
+            var fechadesdeParameter = fechadesde.HasValue ?
+                new ObjectParameter("Fechadesde", fechadesde) :
+                new ObjectParameter("Fechadesde", typeof(System.DateTime));
+    
+            var fechahastaParameter = fechahasta.HasValue ?
+                new ObjectParameter("Fechahasta", fechahasta) :
+                new ObjectParameter("Fechahasta", typeof(System.DateTime));
+    
+            var incluircostosParameter = incluircostos.HasValue ?
+                new ObjectParameter("Incluircostos", incluircostos) :
+                new ObjectParameter("Incluircostos", typeof(bool));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var bodegaidParameter = bodegaid.HasValue ?
+                new ObjectParameter("Bodegaid", bodegaid) :
+                new ObjectParameter("Bodegaid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spRepKardex_Result>("GetListKardexSacoplast", fechadesdeParameter, fechahastaParameter, incluircostosParameter, itemidParameter, bodegaidParameter);
+        }
     }
 }
